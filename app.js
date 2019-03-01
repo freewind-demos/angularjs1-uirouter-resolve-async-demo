@@ -6,14 +6,11 @@ app.config(($stateProvider, $urlRouterProvider) => {
     name: 'user',
     url: '/user',
     template: '<h1>Hello, {{name}}!</h1>',
-    controller: function ($scope, userData) {
-      $scope.name = userData.name;
+    controller: function ($scope, userName) {
+      $scope.name = userName;
     },
     resolve: {
-      userData: (angularName) => ({
-        name: angularName
-      }),
-      angularName: () => 'angular',
+      userName: async () => 'angular'
     }
   });
 
