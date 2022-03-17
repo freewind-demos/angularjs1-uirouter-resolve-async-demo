@@ -5,5 +5,5 @@ resolve可以处理async
 
 ```
 npm install
-npm run demo
+npm start
 ```
